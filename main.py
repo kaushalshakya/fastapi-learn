@@ -1,9 +1,7 @@
-from typing import Union
 from fastapi import FastAPI, Request
 import json
 
 # routes
-
 from app.routes.user_routes import router as user_router
 
 app = FastAPI()

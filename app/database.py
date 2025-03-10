@@ -1,5 +1,5 @@
 from motor.motor_asyncio import AsyncIOMotorClient
-from config import database_url
+from app.config import database_url
 from pymongo.errors import PyMongoError
 
 try:
