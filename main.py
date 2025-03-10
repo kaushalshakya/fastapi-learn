@@ -1,6 +1,10 @@
 from typing import Union
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI, Request
 import json
+
+# routes
+
+from app.routes.user_routes import router as user_router
 
 app = FastAPI()
 
@@ -11,3 +15,6 @@ def home(req: Request):
     print(json.dumps(headers, indent=3))
     message: str = "Hello World"
     return {"message": message}
+
+
+app.include_router(user_router)
