@@ -8,6 +8,7 @@ class StudentSchema(BaseModel):
     course_of_study: str
     year: int = Field(..., gt=0, lt=4)
     gpa: float = Field(..., le=4.0)
+    password: str
 
     class Config:
         schema_extra = {
